@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-
 namespace OOPsProblemStatements.InventoryDataManagement
 {
     public class InventoryOperation
