@@ -6,6 +6,7 @@ namespace OOPsProoblemStatements
     {
         static void Main(string[] args)
         {
+            InventoryOperation operation = new InventoryOperation();
             bool flag = true;
             while (flag)
             {
@@ -13,8 +14,7 @@ namespace OOPsProoblemStatements
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
-                    case 1:
-                        InventoryOperation operation = new InventoryOperation();
+                    case 1:                        
                         operation.ReadJsonFile(@"D:\BridgeLabz\OOPsProblemStatements\OOPsProblemStatements\InventoryDataManagement\Inventory.json");
                         break;
                     case 2:
