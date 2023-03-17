@@ -42,59 +42,106 @@ namespace OOPsProblemStatements.InventoryManagement
             data.PricePerKg = Convert.ToDouble(Console.ReadLine());
             if (name.ToLower().Equals("rice"))
             {
-                riceList.Add(data);              
+                riceList.Add(data);
+                Display (riceList);
             }
             if (name.ToLower().Equals("pulses"))
             {
                 pulsesList.Add(data);
+                Display (pulsesList);
             }
             if (name.ToLower().Equals("wheat"))
             {
                 wheatList.Add(data);
+                Display (wheatList);
             }
         }
         public void EditInventory()
         {
             Console.WriteLine("Enter in which list inventory need to be edited");
             string name = Console.ReadLine();
-            Console.WriteLine("Enter Inventory data");
-            InventoryData data = new InventoryData();
-            data.Name = Console.ReadLine();
-            data.Weight = Convert.ToDouble(Console.ReadLine());
-            data.PricePerKg = Convert.ToDouble(Console.ReadLine());
             if (name.ToLower().Equals("rice"))
             {
-                riceList.Add(data);
+                foreach (var data in riceList)
+                {
+                    Console.WriteLine("Enter Name");
+                    data.Name = Console.ReadLine();
+                    Console.WriteLine("Enter Weight");
+                    data.Weight = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter PricePerKg");
+                    data.PricePerKg = Convert.ToDouble(Console.ReadLine());
+                }
+                Display(riceList);
             }
             if (name.ToLower().Equals("pulses"))
             {
-                pulsesList.Add(data);
+                foreach (var data in pulsesList)
+                {
+                    Console.WriteLine("Enter Name");
+                    data.Name = Console.ReadLine();
+                    Console.WriteLine("Enter Weight");
+                    data.Weight = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter PricePerKg");
+                    data.PricePerKg = Convert.ToDouble(Console.ReadLine());
+                }
+                Display(pulsesList);
             }
             if (name.ToLower().Equals("wheat"))
             {
-                wheatList.Add(data);
+                foreach (var data in wheatList)
+                {
+                    Console.WriteLine("Enter Name");
+                    data.Name = Console.ReadLine();
+                    Console.WriteLine("Enter Weight");
+                    data.Weight = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter PricePerKg");
+                    data.PricePerKg = Convert.ToDouble(Console.ReadLine());
+                }
+                Display(wheatList);
             }
         }
         public void DeleteInventory()
         {
             Console.WriteLine("Enter in which list inventory need to be deleted");
-            string name = Console.ReadLine();
-            Console.WriteLine("Enter Inventory data");
-            InventoryData data = new InventoryData();
-            data.Name = Console.ReadLine();
-            data.Weight = Convert.ToDouble(Console.ReadLine());
-            data.PricePerKg = Convert.ToDouble(Console.ReadLine());
+            string name = Console.ReadLine();         
             if (name.ToLower().Equals("rice"))
             {
-                riceList.Remove(data);
+                foreach (var data in riceList)
+                {
+                    Console.WriteLine("Enter Name");
+                    data.Name = Console.ReadLine();
+                    Console.WriteLine("Enter Weight");
+                    data.Weight = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter PricePerKg");
+                    data.PricePerKg = Convert.ToDouble(Console.ReadLine());
+                }
+                Display(riceList);
             }
             if (name.ToLower().Equals("pulses"))
             {
-                pulsesList.Remove(data);
+                foreach (var data in pulsesList)
+                {
+                    Console.WriteLine("Enter Name");
+                    data.Name = Console.ReadLine();
+                    Console.WriteLine("Enter Weight");
+                    data.Weight = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter PricePerKg");
+                    data.PricePerKg = Convert.ToDouble(Console.ReadLine());
+                }
+                Display(pulsesList);
             }
             if (name.ToLower().Equals("wheat"))
             {
-                wheatList.Remove(data);
+                foreach (var data in wheatList)
+                {
+                    Console.WriteLine("Enter Name");
+                    data.Name = Console.ReadLine();
+                    Console.WriteLine("Enter Weight");
+                    data.Weight = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter PricePerKg");
+                    data.PricePerKg = Convert.ToDouble(Console.ReadLine());
+                }
+                Display (wheatList);
             }
         }
     }
