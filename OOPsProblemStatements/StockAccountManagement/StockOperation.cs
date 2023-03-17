@@ -19,7 +19,7 @@ namespace OOPsProblemStatements.StockAccountManagement
                 Console.WriteLine(inventory.Name + "    " + inventory.Share + "  " + inventory.SharePrice + "  " + inventory.Share * inventory.SharePrice);
                 Total += (inventory.Share * inventory.SharePrice);
             }
-            Console.WriteLine("Stock value: " + Total);
+            Console.WriteLine("Stock Report: " + Total);
         }
     }
 }
