@@ -9,7 +9,7 @@ namespace OOPsProblemStatements.StockAccountManagement
     public class StockDetails
     {
         public string Name { get; set; }
-        public double Share { get; set; }
+        public double NumOfShares { get; set; }
         public double SharePrice { get; set; }
     }
 }

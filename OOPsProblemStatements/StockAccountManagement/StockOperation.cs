@@ -11,12 +11,15 @@ namespace OOPsProblemStatements.StockAccountManagement
     {
         public void ReadJsonfile(string filePath)
         {
+            double Total = 0;
             var data = File.ReadAllText(filePath);
             var result = JsonConvert.DeserializeObject<List<StockDetails>>(data);
             foreach (var inventory in result)
             {
-                Console.WriteLine(inventory.Name + "    " + inventory.Share + "  " + inventory.SharePrice + "  " + inventory.Share * inventory.SharePrice);
+                Console.WriteLine(inventory.Name + "  " + inventory.NumOfShares + "  " + inventory.SharePrice + "  " + inventory.NumOfShares * inventory.SharePrice);
+                Total += inventory.NumOfShares * inventory.SharePrice;
             }
+            Console.WriteLine("Stock Report: "+Total);
         }
     }
 }
