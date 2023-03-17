@@ -19,7 +19,7 @@ namespace OOPsProblemStatements.InventoryManagement
             var result = JsonConvert.DeserializeObject<InventoryList>(data);
             riceList = result.RiceList;
             Display(riceList);
-            List<InventoryData> pulsesList = result.PulsesList;
+            pulsesList = result.PulsesList;
             Display(pulsesList);
             wheatList = result.WheatList;
             Display(wheatList);

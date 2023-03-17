@@ -22,20 +22,27 @@ namespace OOPsProoblemStatements
                     case 2:
                         InventoryDataManagement inventory = new InventoryDataManagement();
                         inventory.ReadJsonFile(@"D:\BridgeLabz\OOPsProblemStatements\OOPsProblemStatements\InventoryManagement\InventoryDetails.json");
-                        Console.WriteLine("Choose option to perform \n1.Add data \n2.Edit data \n3.Delete data");
-                        int opt = Convert.ToInt32(Console.ReadLine());
-                        switch (opt)
+                        bool f = true;
+                        while (f)
                         {
-                            case 1:
-                                inventory.AddInventory();                          
-                                break;
-                            case 2:
-                                inventory.EditInventory();
-                                break;
-                            case 3:
-                                inventory.DeleteInventory();
-                                break;
-                        }
+                            Console.WriteLine("Choose option to perform \n1.Add data \n2.Edit data \n3.Delete data \n4.Exit");
+                            int opt = Convert.ToInt32(Console.ReadLine());
+                            switch (opt)
+                            {
+                                case 1:
+                                    inventory.AddInventory();
+                                    break;
+                                case 2:
+                                    inventory.EditInventory();
+                                    break;
+                                case 3:
+                                    inventory.DeleteInventory();
+                                    break;
+                                case 4:
+                                    f = false;
+                                    break;
+                            }
+                        }                      
                         break;
                     case 3:
                         StockOperation stockOperation = new StockOperation();
