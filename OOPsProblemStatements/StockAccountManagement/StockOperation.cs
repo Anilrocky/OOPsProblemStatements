@@ -11,6 +11,7 @@ namespace OOPsProblemStatements.StockAccountManagement
     {
         public void ReadJsonfile(string filePath)
         {
+            double Total = 0;
             var data = File.ReadAllText(filePath);
             var result = JsonConvert.DeserializeObject<List<StockDetails>>(data);
             double Total = 0;
@@ -20,6 +21,10 @@ namespace OOPsProblemStatements.StockAccountManagement
                 Total += (inventory.Share * inventory.SharePrice);
             }
             Console.WriteLine("Stock Report: " + Total);
+                Console.WriteLine(inventory.Name + "  " + inventory.NumOfShares + "  " + inventory.SharePrice + "  " + inventory.NumOfShares * inventory.SharePrice);
+                Total += inventory.NumOfShares * inventory.SharePrice;
+            }
+            Console.WriteLine("Stock Report: "+Total);
         }
     }
 }
