@@ -27,7 +27,7 @@ namespace OOPsProoblemStatements
                         switch (opt)
                         {
                             case 1:
-                                inventory.AddInventory();                              
+                                inventory.AddInventory();                          
                                 break;
                             case 2:
                                 inventory.EditInventory();
