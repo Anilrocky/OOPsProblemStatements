@@ -102,46 +102,23 @@ namespace OOPsProblemStatements.InventoryManagement
         }
         public void DeleteInventory()
         {
+            InventoryData data = new InventoryData();
             Console.WriteLine("Enter in which list inventory need to be deleted");
-            string name = Console.ReadLine();         
+            string name = Console.ReadLine();
             if (name.ToLower().Equals("rice"))
             {
-                foreach (var data in riceList)
-                {
-                    Console.WriteLine("Enter Name");
-                    data.Name = Console.ReadLine();
-                    Console.WriteLine("Enter Weight");
-                    data.Weight = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("Enter PricePerKg");
-                    data.PricePerKg = Convert.ToDouble(Console.ReadLine());
-                }
+                riceList.Remove(data);
                 Display(riceList);
             }
             if (name.ToLower().Equals("pulses"))
             {
-                foreach (var data in pulsesList)
-                {
-                    Console.WriteLine("Enter Name");
-                    data.Name = Console.ReadLine();
-                    Console.WriteLine("Enter Weight");
-                    data.Weight = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("Enter PricePerKg");
-                    data.PricePerKg = Convert.ToDouble(Console.ReadLine());
-                }
+                pulsesList.Remove(data);
                 Display(pulsesList);
             }
             if (name.ToLower().Equals("wheat"))
             {
-                foreach (var data in wheatList)
-                {
-                    Console.WriteLine("Enter Name");
-                    data.Name = Console.ReadLine();
-                    Console.WriteLine("Enter Weight");
-                    data.Weight = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("Enter PricePerKg");
-                    data.PricePerKg = Convert.ToDouble(Console.ReadLine());
-                }
-                Display (wheatList);
+                wheatList.Remove(data);
+                Display(wheatList);
             }
         }
     }
