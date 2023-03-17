@@ -43,7 +43,7 @@ namespace OOPsProblemStatements.InventoryManagement
             if (name.ToLower().Equals("rice"))
             {
                 riceList.Add(data);
-                Display (riceList);
+                Display(riceList);
             }
             if (name.ToLower().Equals("pulses"))
             {
