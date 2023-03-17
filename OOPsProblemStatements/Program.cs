@@ -1,5 +1,6 @@
 ﻿using OOPsProblemStatements.InventoryDataManagement;
 using OOPsProblemStatements.InventoryManagement;
+using OOPsProblemStatements.StockAccountManagement;
 using System;
 namespace OOPsProoblemStatements
 {
@@ -10,7 +11,7 @@ namespace OOPsProoblemStatements
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose option to perform \n1.Inventory Data Management \n2.Inventory Management \n3.Add Inventory \n4.Exit");
+                Console.WriteLine("Choose option to perform \n1.Inventory Data Management \n2.Inventory Management \n3.Stock Acoount Management \n4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -23,8 +24,8 @@ namespace OOPsProoblemStatements
                         inventory.ReadJsonFile(@"D:\BridgeLabz\OOPsProblemStatements\OOPsProblemStatements\InventoryManagement\InventoryDetails.json");
                         break;
                     case 3:
-                        InventoryDataManagement inventory1 = new InventoryDataManagement();
-                        inventory1.DeleteInventory();
+                        StockOperation stockOperation = new StockOperation();
+                        stockOperation.ReadJsonfile(@"D:\BridgeLabz\OOPsProblemStatements\OOPsProblemStatements\StockAccountManagement\Stock.json");
                         break;
                     case 4:
                         flag = false;
